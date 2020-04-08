@@ -103,6 +103,9 @@ output.json
 .pub-cache/
 .pub/
 
+# Web related
+lib/generated_plugin_registrant.dart
+
 # Android related
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
@@ -402,3 +405,6 @@ hs_err_pid*
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.gitignore.io/api/osx,linux,macos,android,windows,flutter,intellij+all,androidstudio
+
+# Exceptions to above rules.
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
