@@ -11,7 +11,11 @@ jobs:
   # This workflow contains a single job called "build"
   build-and-test:
     # The type of runner that the job will run on
-    runs-on: ubuntu-18.04
+    name: Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -21,7 +25,8 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '1.9.1+hotfix.6'
+          flutter-version: 'v1.12.13+hotfix.8'
+          channel: 'stable'
       - run: flutter pub get
       - run: flutter test
       - run: flutter build apk
