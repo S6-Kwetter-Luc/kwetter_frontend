@@ -1,4 +1,4 @@
-package com.lucurlings.kwetter_frontend
+package com.example.kwetter_frontend
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
